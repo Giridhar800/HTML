@@ -84,22 +84,8 @@ NAVBAR CODE
   </div>
 </nav>
 
-3 bugs are not rectifird
-------------------------
-1->password change
-2->payment(last)
-3->heart(color change)
 
 
-
-4->payment == payments(admin loorderplaced)
-
-razor
-------
-KeyId-> rzp_test_HP354sX45HK4hC
-SecrectId-> JMVTeHAH6uUtRshw1apy4qnF
-
-dummy upi id->success@razorpay
 
 
 
