@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>HTML MARQEE TAG</title>
+ </head>
+ <body bgcolor="green">
+ <center><h1><font color="yellow"> MARQUE TAG WITH ATTRIBUTE</font> </h1>
+ <hr><hr>
+ A Place to learn about Gandhi, his life, work & philosophy.
+ This comprehensive site is regularly updated & maintained by non-profit Gandhian Organizations in India & has a wealth of information & material for researchers, students, activists & anyone interested in Gandhi.
+ <hr><hr>
+ <marquee><font color="blue"> MS-OFFICE,PHOTOSHOP,PAGEMAKER,CORELDRAW,AUTOCAD,C,C++,JAVA </font></marquee>
+  <hr><hr>
+ </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title> Giri</title>
+ </head>
+ <body>
+  <h1> LISTS (UNORDERED LIST) </h1><hr><hr>
+  <ul>
+  <font face="impact"size="6"color="yellow"><li type="square">PHOTOSHOP </li></font>
+  <li type="circle"><font color="pink" size="6" face="mistral">PAGEMAKER </font></li>
+  <li><font color="pink" size="6" face="mistral">CORELDRAW </li>
+  <font face="impact"size="6"color="yellow"><li type="square">ADOBE PREMIOR PRO</li></font>
+  </ul><hr><hr>
+ </body>
+</html>

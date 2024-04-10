@@ -1,0 +1,15 @@
+Experence Questions
+--------------------
+1.what is roles and responsbulites?
+2.what is your daily routie?
+3.How your company works?
+4.Which methodlogy works?(agile)
+5.Strength and weekness?
+6.Tell regording sdlc(software developement life cycle)
+7.In your project what are the dificult task you forform?
+
+utube project
+-------------
+PS C:\Users\91800\utubeenv\Scripts\Aproject> 
+
+

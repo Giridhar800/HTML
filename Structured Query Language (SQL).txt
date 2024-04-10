@@ -1,0 +1,246 @@
+Structured Query Language (SQL)
+-------------------------------
+--> DDL, DQL, DML, DCL and TCL Commands
+
+1.DDL (Data Definition Language)
+2.DQL (Data Query Language)
+3.DML(Data Manipulation Language)
+4.DCL (Data Control Language)
+5.TCL (Transaction Control Language)
+-------------------------------------------------------------------------------------------------
+Database creation :
+-------------------
+Command to create the database.  Here <database name> is the db name.
+syntax: CREATE DATABASE <dbname>;
+--> Use <database>
+1.Databases findout?
+------------------
+syntax: show databases;
+2.Tables findout?
+---------------
+syntax: Select * form tab;
+3.How many columns in table?
+----------------------------
+syntax:desc tablename;
+[desc means:Discription of the table]
+
+-------------------------------------------------------------------------------------------------
+
+1.DDL (Data Definition Language)
+--------------------------------
+DDL or Data Definition Language actually consists of the SQL commands that can be used to define the database schema. It simply deals with descriptions of the database schema and is used to create and modify the structure of database objects in the database. DDL is a set of SQL commands used to create, modify, and delete database structures but not data. These commands are normally not used by a general user, who should be accessing the database via an application.
+
+List of DDL commands: 
+---------------------
+CREATE: 
+-------
+This command is used to create the database or its objects (like table, index, function, views, store procedure, and triggers).
+SQL CREATE TABLE Statement
+--------------------------
+A Table is a combination of rows and columns. For creating a table we have to define the structure of a table by adding names to columns and providing data type and size of data to be stored in columns.
+Syntax: CREATE table table_name(Column1 datatype (size),column2 datatype (size),... columnN datatype(size));
+
+DROP: 
+-----
+This command is used to delete objects from the database.
+What is DROP Command?
+---------------------
+DROP is used to delete a whole database or just a table.
+the DROP statement which destroys objects like an existing database, table, index, or view. A DROP statement in SQL removes a component from a relational database management system (RDBMS). 
+Syntax:DROP object object_name ;
+Case 1: To Drop a table
+-------
+DROP TABLE table_name;
+table_name: Name of the table to be deleted.
+Case 2: To Drop a database
+-------
+Syntax:
+DROP DATABASE database_name;
+database_name: Name of the database to be deleted.
+
+ALTER: 
+------
+This is used to alter the structure of the database.
+SQL ALTER TABLE – ADD, DROP, MODIFY
+-----------------------------------
+The ALTER TABLE statement in SQL is used to add, remove, or modify columns in an existing table. The ALTER TABLE statement is also used to add and remove various constraints on existing tables.
+ALTER TABLE ADD Column Statement in SQL
+---------------------------------------
+ADD is used to add columns to the existing table. Sometimes we may require to add additional information, in that case, we do not require to create the whole database again, ADD comes to our rescue.
+Syntax:ALTER TABLE table_name ADD (Columnname_1  datatype,
+       Columnname_2  datatype, …Columnname_n  datatype);
+ALTER TABLE DROP Column Statement
+---------------------------------
+DROP COLUMN is used to drop columns in a table. Deleting the unwanted columns from the table.
+Syntax:ALTER TABLE table_name DROP COLUMN column_name;
+
+TRUNCATE: 
+---------
+This is used to remove all records from a table, including all spaces allocated for the records are removed.
+What is TRUNCATE Command?
+-------------------------
+The major difference between TRUNCATE and DROP is that truncate is used to delete the data inside the table not the whole table.
+TRUNCATE statement is a Data Definition Language (DDL) operation that is used to mark the extent of a table for deallocation (empty for reuse). The result of this operation quickly removes all data from a table, typically bypassing several integrity-enforcing mechanisms. It was officially introduced in the SQL:2008 standard. The TRUNCATE TABLE mytable statement is logically (though not physically) equivalent to the DELETE FROM mytable statement (without a WHERE clause).
+Syntax:TRUNCATE TABLE  table_name;
+-------
+table_name: Name of the table to be truncated.
+
+
+COMMENT: 
+--------
+This is used to add comments to the data dictionary.
+Comments are used to explain sections of SQL statements or to prevent SQL statements from being executed. As is any programming language comments matter a lot in SQL also.
+Comments can be written in the following three formats:
+-------------------------------------------------------
+1.Single-line comments
+2.Multi-line comments
+3.In-line comments
+Single Line Comments
+--------------------
+Comments starting and ending in a single line are considered single-line comments. A line starting with ‘–‘ is a comment and will not be executed. 
+Syntax:— single line comment
+       — another comment
+SELECT * FROM Customers; 
+Multi-Line Comments
+-------------------
+Comments starting in one line and ending in different lines are considered as multi-line comments. 
+A line starting with ‘/*’ is considered as starting point of the comment and is terminated when ‘*/’ is encountered. 
+Syntax:/* multi line comment another comment */
+SELECT * FROM Customers; 
+In-Line Comments
+----------------
+In-line comments are an extension of multi-line comments, comments can be stated in between the statements and are enclosed in between ‘/*’ and ‘*/’. 
+Syntax:SELECT * FROM /* Customers; */ 
+
+RENAME: 
+-------
+This is used to rename an object existing in the database.
+ALTER (RENAME):Sometimes we may want to rename our table to give it a more relevant name. For this purpose, we can use ALTER TABLE to rename the name of the table. SQL ALTER TABLE is a command used to modify the structure of an existing table in a database.
+Syntax:ALTER TABLE table_name RENAME TO new_table_name;
+-------------------------------------------------------------------------------------------------
+
+2.DQL (Data Query Language)
+-------------------------
+DQL statements are used for performing queries on the data within schema objects. The purpose of the DQL Command is to get some schema relation based on the query passed to it. We can define DQL as follows it is a component of SQL statement that allows getting data from the database and imposing order upon it. It includes the SELECT statement. This command allows getting the data out of the database to perform operations with it. When a SELECT is fired against a table or tables the result is compiled into a further temporary table, which is displayed or perhaps received by the program i.e. a front-end.
+SELECT: 
+-------
+It is used to retrieve data from the database.
+The SELECT Statement in SQL is used to retrieve or fetch data from a database.
+To fetch the entire table or all the fields in the table:
+---------------------------------------------------------
+Syntax:SELECT * FROM table_name;
+Query to fetch the fields CustomerName, LastName from the table Customer:
+-------------------------------------------------------------------------
+Syntax:SELECT CustomerName, LastName FROM Customer;
+-------------------------------------------------------------------------------------------------  
+
+3.DML(Data Manipulation Language)
+-------------------------------
+The SQL commands that deal with the manipulation of data present in the database belong to DML or Data Manipulation Language and this includes most of the SQL statements. It is the component of the SQL statement that controls access to data and to the database. Basically, DCL statements are grouped with DML statements.
+
+List of DML commands:
+---------------------
+INSERT: 
+-------
+It is used to insert data into a table.
+The INSERT INTO statement of SQL is used to insert a new row/record in a table. There are two ways of using the SQL INSERT INTO statement for inserting rows.
+1. Only Values
+--------------
+The first method is to specify only the value of data to be inserted without the column names.
+Syntax:INSERT INTO table_name VALUES (value1, value2, value3); 
+2.Column Names And Values Both
+-------------------------------
+In the second method we will specify both the columns which we want to fill and their corresponding values
+Syntax:INSERT INTO table_name (column1, column2, column3) VALUES ( value1, value2, value3);
+
+UPDATE: 
+-------
+It is used to update existing data within a table.
+The UPDATE statement in SQL is used to update the data of an existing table in the database. We can update single columns as well as multiple columns using the UPDATE statement as per our requirement.
+Syntax:UPDATE table_name SET column1 = value1, column2 = value2,… 
+WHERE: Specifies the condition which we want to implement on the table.
+------
+Update Single Column:UPDATE Customer SET CustomerName  = 'Nitin' WHERE Age = 22;
+--------------------
+Updating Multiple Columns:UPDATE Customer SET CustomerName = 'Satyam', 
+-------------------------       Country = 'USA' WHERE CustomerID = 1;
+
+
+DELETE: 
+-------
+It is used to delete records from a database table.
+SQL DELETE is an important part of database management DELETE can be used to selectively remove records from a database table based on certain conditions. This SQL DELETE operation is important for database size management, data accuracy, and integrity.
+Syntax: DELETE FROM table_name WHERE some_condition;
+-------
+
+LOCK: 
+-----
+Table control concurrency.
+SQL Locks :
+-----------
+SQL Server is a relational database, data consistency is an important mechanism, and it can be done by means of SQL Locks. A lock is established in SQL Server when a transaction starts, and it is released when it is ended.. There are different types of locks are there.
+
+Shared (S) Locks: When the object needs to be read, this type of lock will occur, but this is not harmful.
+Exclusive (X) Locks: It prevents other transactions like inserting/updating/deleting etc., Hence no modifications can be done on a locked object.
+Update (U) Locks: More or less similar to Exclusive lock but here the operation can be viewed as “read phase” and “write phase”. Especially during the read phase, other transactions are prevented. 
+Intent Locks: When SQL Server has the shared (S) lock or exclusive (X) lock on a row, then the intent lock is on the table.
+Regular intent locks: Intent exclusive (IX) , Intent shared (IS), and Intent update (IU).
+Conversion locks: Shared with intent exclusive (SIX), Shared with intent update (SIU), and Update with intent exclusive (UIX).
+-------------------------------------------------------------------------------------------------
+
+DCL (Data Control Language)
+---------------------------
+DCL includes commands such as GRANT and REVOKE which mainly deal with the rights, permissions, and other controls of the database system. 
+List of  DCL commands: 
+----------------------
+GRANT: 
+------
+This command gives users access privileges to the database.
+SQL Grant command is specifically used to provide privileges to database objects for a user. This command also allows users to grant permissions to other users too. 
+Syntax: grant privilege_name on object_name to {user_name | public | role_name}  
+-------
+Here privilege_name is which permission has to be granted, object_name is the name of the database object, user_name is the user to which access should be provided, the public is used to permit access to all the users.
+Syntax:GRANT SELECT, UPDATE ON MY_TABLE TO SOME_USER, ANOTHER_USER;
+-------  
+
+REVOKE: 
+-------
+This command withdraws the user’s access privileges given by using the GRANT command.  
+Revoke command withdraw user privileges on database objects if any granted. It does operations opposite to the Grant command. When a privilege is revoked from a particular user U, then the privileges granted to all other users by user U will be revoked. 
+
+Syntax: revoke privilege_name on object_name from {user_name | public | role_name}
+------
+Syntax: REVOKE SELECT, UPDATE ON MY_TABLE FROM USER1, USER2;
+-------
+-------------------------------------------------------------------------------------------------
+
+TCL (Transaction Control Language)
+----------------------------------
+Transactions group a set of tasks into a single execution unit. Each transaction begins with a specific task and ends when all the tasks in the group are successfully completed. If any of the tasks fail, the transaction fails. Therefore, a transaction has only two results: success or failure. You can explore more about transactions here. Hence, the following TCL commands are used to control the execution of a transaction: 
+BEGIN: Opens a Transaction.
+COMMIT:(Data permanently save on database)
+-------
+If everything is in order with all statements within a single transaction, all changes are recorded together in the database is called committed. The COMMIT command saves all the transactions to the database since the last COMMIT or ROLLBACK command. 
+Syntax: COMMIT;
+------- 
+
+ROLLBACK:(deleted data back)
+---------
+If any error occurs with any of the SQL grouped statements, all changes need to be aborted. The process of reversing changes is called rollback. This command can only be used to undo transactions since the last COMMIT or ROLLBACK command was issued. 
+Syntax: ROLLBACK;  
+
+SAVEPOINT: Sets a save point within a transaction.
+----------
+SAVEPOINT creates points within the groups of transactions in which to ROLLBACK. 
+A SAVEPOINT is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire transaction.
+Syntax: SAVEPOINT SAVEPOINT_NAME;  
+
+-------------------------------------------------------------------------------------------------Operators
+---------
+1.Arithmetic Operators
+--> Add(+)
+--> Subtract(-)
+--> Multiply(*)
+--> Divide(/)
+--> Modulo(%)
+2.Bitwise Operators
