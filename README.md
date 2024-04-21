@@ -47,5 +47,5 @@ Feel free to explore the folders and files to find exercises and examples relate
 
 Getting Started
 To get started with this repository, simply clone or download it to your local machine:
-git clone https://github.com/your-username/html-practice.git
+git clone 
 Once you have the repository locally, you can explore the files using a text editor or an integrated development environment (IDE). Each topic is organized into its own folder for easy navigation.
