@@ -2,11 +2,11 @@
 Welcome to our HTML practice repository!
 # Description
 This repository is dedicated to practicing HTML programming across all topics.
-# Features
+-# Features
 Covers a wide range of HTML topics<br>
 Regularly updated with new exercises<br> 
 Suitable for beginners and advanced users alike<br>
-# Usage
+-# Usage
 Clone the repository: git clone "https://github.com/Giridhar800/HTML.git"<br>
 Navigate to the directory: cd HTML-practice<br>
 Start practicing HTML by exploring the exercises in each topic folder.<br>
